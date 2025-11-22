@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Linux Uses & Ethical Hacking Tools — Simple Guide</title>
+  <!-- External CSS (HTML वेगळी, CSS वेगळी) -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Linux for Ethical Hacking Tools</h1>
+    <p class="subtitle">Marathi-English guide: Learn ethical, permission-based security tooling on Linux.</p>
+  </header>
+
+  <main class="container">
+    <!-- Why Linux -->
+    <section class="card">
+      <span class="badge">का Linux? / Why Linux?</span>
+      <h2>Key uses in cybersecurity</h2>
+      <ul class="list">
+        <li><strong>Penetration testing:</strong> Security distrosमध्ये ready toolkits (उदा. Kali).</li>
+        <li><strong>Network visibility:</strong> Traffic analysis, configs, logs पाहून defenses मजबूत.</li>
+        <li><strong>Password auditing:</strong> स्वतःच्या systemsचे passwords strength verify करणे.</li>
+        <li><strong>Scripting & automation:</strong> Bash/Pythonने routine checks automate करणे.</li>
+        <li><strong>Forensics:</strong> Incident नंतर logs/disk images analyze करणे.</li>
+      </ul>
+    </section>
+
+    <!-- Popular distros -->
+    <section class="card">
+      <span class="badge">Popular distros</span>
+      <h2>Security-focused Linux options</h2>
+      <div class="grid-2">
+        <div>
+          <h3>Kali Linux</h3>
+          <p>Pen-testing toolkit; अनेक preinstalled tools.</p>
+        </div>
+        <div>
+          <h3>Parrot Security OS</h3>
+          <p>Privacy + research; light and versatile.</p>
+        </div>
+        <div>
+          <h3>BlackArch</h3>
+          <p>Advanced users; हजारो tools repository.</p>
+        </div>
+        <div>
+          <h3>Tails</h3>
+          <p>Live OS for secure, anonymous browsing.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Common tools -->
+    <section class="card">
+      <span class="badge">Tools (उपयुक्त साधने)</span>
+      <h2>Common Linux security tools and what they do</h2>
+      <div class="grid-2">
+        <div>
+          <h3>Nmap</h3>
+          <p>Network discovery & auditing. Hosts/ports शोधतो.</p>
+        </div>
+        <div>
+          <h3>Wireshark</h3>
+          <p>Packet analyzer; traffic visually inspect.</p>
+        </div>
+        <div>
+          <h3>Aircrack-ng</h3>
+          <p>Wireless auditing (WEP/WPA) — lab-only, with permission.</p>
+        </div>
+        <div>
+          <h3>Metasploit</h3>
+          <p>Pen-test framework; exploit testing in controlled labs.</p>
+        </div>
+        <div>
+          <h3>John the Ripper / Hashcat</h3>
+          <p>Password strength auditing for your own hashes.</p>
+        </div>
+        <div>
+          <h3>tcpdump</h3>
+          <p>CLI packet capture; quick visibility.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Safe examples -->
+    <section class="card">
+      <span class="badge">Safe examples (फक्त तुमच्या labमध्ये)</span>
+      <h2>Hands-on examples (benign, permission-based)</h2>
+
+      <h3>1) Discover live hosts (Nmap ping scan)</h3>
+      <p>Only on your own network/subnet.</p>
+      <pre><code># Debian/Ubuntu/Kali
+sudo apt update && sudo apt install nmap
+
+# Safe ping scan (no port probing)
+sudo nmap -sn 192.168.1.0/24</code></pre>
+
+      <h3>2) Check services on your own device</h3>
+      <pre><code># Replace with your host IP
+sudo nmap -sV 192.168.1.10</code></pre>
+
+      <h3>3) View listening ports on your machine</h3>
+      <pre><code>sudo ss -tulpen</code></pre>
+
+      <h3>4) Capture small packet sample (own interface)</h3>
+      <pre><code># Replace wlan0/eth0 with your interface
+sudo tcpdump -i wlan0 -c 25 -vv</code></pre>
+
+      <div class="callout warn">
+        <strong>Ethics & legality:</strong> Test only in controlled labs or with explicit permission. उद्देश: शिकणे आणि सुरक्षा सुधारणा.
+      </div>
+    </section>
+
+    <!-- Learning workflow -->
+    <section class="card">
+      <span class="badge">Workflow (शिकण्याची पायरी)</span>
+      <h2>Suggested learning path</h2>
+      <ol class="list">
+        <li><strong>Set up a lab:</strong> VMs/spare devices तुम्ही control करता.</li>
+        <li><strong>Linux basics:</strong> Shell, users, networking (<code>ip</code>, <code>ss</code>, <code>journalctl</code>).</li>
+        <li><strong>Tool practice:</strong> Nmap, tcpdump, Wireshark labमध्ये.</li>
+        <li><strong>Automation:</strong> Bash/Python scriptsने routine checks.</li>
+        <li><strong>Document & remediate:</strong> Findings नोंदवा; hardening steps घ्या.</li>
+      </ol>
+    </section>
+  </main>
+  <section class="instagram">
+<!-- paste into your HTML where you want the link -->
+<a href="https://www.instagram.com/godselwar_namdev?utm_source=qr&igsh=eHpkYzkyZTBmcDU0" target="_blank" rel="noopener noreferrer">
+  Follow me on Instagram @godeslwarnamdev
+  </section>
+</a>
+  <footer class="site-footer"> 
+    Built for ethical learning. Use responsibly and legally. Strengthen security — never harm systems.
+  </footer>
+</body>
+</html>
